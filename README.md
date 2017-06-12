@@ -3,8 +3,7 @@ a React-based rendition of the New York Times Article Search application
 
 # instructions
 * `$ fork repo` 
-* `$ npm repo` 
-
+* `$ npm install` 
 This will install all necessary components and create the MongoDB database marked 'nytreact'
 
 # purpose
