@@ -2,9 +2,9 @@
 a React-based rendition of the New York Times Article Search application
 
 # instructions
-Download repo
-Npm Install packages
-This will create the MongoDB database marked 'nytreact'
+ $ for repo
+ $ npm install
+ This will install all necessary components and create the MongoDB database marked 'nytreact'
 
 # purpose
 Using mongoose we are going to create an Article schema and model
