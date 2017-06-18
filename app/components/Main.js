@@ -1,26 +1,26 @@
-var React = require('react');
+// Include React
+var React = require("react");
 
-var Link = require('react-router').Link;
+// Including the Link component from React Router to navigate within our application without full page reloads
+// var Link = require("react-router").Link;
 
 var Main = React.createClass({
 
-	render: function() {
+    // Here we render the function
+    render: function() {
 
-		return (
-		
-			<div class="container">
-				<div class="jumbotron">
-					<h2><strong>Which Child???</strong></h2>
-					<p><em>A journey through the whimsical world of React Routing</em></p>
-					<hr />
-					{/*<p>
-						<Link to='/child1'><button class="btn btn-primary btn-lg">Show Child #1</button></Link>
-						<Link to='/child2'><button class="btn btn-danger btn-lg">Show Child #2</button></Link>
-					</p>*/}
-				</div>
-			</div>
-		)
-	}
-})
+        return (
 
+            <div className="container">
+            
+                <hr />
+                <h2><strong className="">Hi World</strong></h2>
+                <hr />
+            
+            </div>
+        );
+    }
+});
+
+// Export the component back for use in other files
 module.exports = Main;

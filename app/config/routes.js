@@ -1,43 +1,40 @@
-//the react library
-var React = require('react');
+// dependencies
+//import
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {
+  HashRouter,
+  Route,
+  Link
+} from 'react-router-dom';
 
-//the react router
-var router = require('react-router');
-
-// the route component for displaying individual routes
-var Route = router.Route;
-
-// to pass in configurations at routes
-var Router = router.Router;
-
-// routing client side without a Server
-var hashHistory = router.hashHistory;
-
-// catch-all routes for when you don't input a proper route
-var IndexRoute = router.IndexRoute;
+// var React = require('react');
+// var router = require('react-router');
 
 
-var Main = require('../components/Main')
-var Results = require('../components/Results')
-var Saved = require('../components/Saved')
-var Search = require('../components/Search')
+// to diplay individual routes
+// var Route = router.Route;
 
+// too pass configuration as props
+// var Router = router.Router;
+
+
+
+// catch all route
+// var IndexRoute = router.IndexRoute;
+
+// ----------------------------
+// Routes
+// ----------------------------
+var Main = require('../components/Main');
 
 module.exports = (
 
-	// note that the highest level is a Router, not Route
-	<Router history={hashHistory}>
-		<Route path='/' component={Main}>
+    <HashRouter>
 
-{/*			<Route path='Search' component={Search} />
-			
-				<Route path="Results" component={Results} />
-        		<Route path="Saved" component={Saved} />
-			
-			<IndexRoute path="Search" component={Search} />
+        <Route path="/" component={Main}>
+        </Route>
+		
 
-			<IndexRoute component={Main} /> */}
-			
-		</Route>
-	</Router>
-)
+    </HashRouter>
+);
