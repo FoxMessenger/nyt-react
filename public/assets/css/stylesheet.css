@@ -3,3 +3,7 @@
     color: tomato;
 
 }
+
+.row--border {
+	border-style: solid;
+}

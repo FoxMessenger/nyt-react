@@ -22,7 +22,7 @@ class Main extends Component {
                 <h2 className='title'><strong>New York Times Article Search</strong></h2>
                 <hr />
 
-                <Link to='/Search'><button className='btn btn-primary btn-lg'>Search Params</button></Link>
+                {/*<Link to='/Search'><button className='btn btn-primary btn-lg'>Search Params</button></Link>*/}
             
 
                 <div className='row'>
