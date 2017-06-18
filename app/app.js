@@ -1,8 +1,11 @@
-// dependencies
-var React = require('react');
-var ReactDOM = require('react-dom');
+// ----------------------------
+// import dependencies
+// ----------------------------
+import React, {Component} from 'react';
+import routes from './config/routes';
+import ReactDOM from 'react-dom';
 
-// handle the routes
-var routes = require('./config/routes');
-
+// ----------------------------
+// render routes
+// ----------------------------
 ReactDOM.render(routes, document.getElementById('app'));

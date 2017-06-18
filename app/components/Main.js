@@ -1,26 +1,40 @@
-// Include React
-var React = require("react");
+// ----------------------------
+// import dependencies
+// ----------------------------
+import React, {Component} from 'react';
+import Search from '../components/children/Search';
+import {
+  
+  Link
+} from 'react-router-dom';
+// ----------------------------
+// Render to screen
+// ----------------------------
+class Main extends Component {
 
-// Including the Link component from React Router to navigate within our application without full page reloads
-// var Link = require("react-router").Link;
-
-var Main = React.createClass({
-
-    // Here we render the function
-    render: function() {
+    render() { 
 
         return (
 
-            <div className="container">
+            <div className='container'>
             
                 <hr />
-                <h2><strong className="">Hi World</strong></h2>
+                <h2 className='title'><strong>New York Times Article Search</strong></h2>
                 <hr />
+
+                <Link to='/Search'><button className='btn btn-primary btn-lg'>Search Params</button></Link>
             
+
+                <div className='row'>
+
+                    <Search />
+
+                </div>
             </div>
+
         );
     }
-});
+};
 
 // Export the component back for use in other files
-module.exports = Main;
+export default Main;

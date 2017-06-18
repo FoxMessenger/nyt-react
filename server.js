@@ -1,16 +1,16 @@
 // ----------------------------
 // dependencies
 // ----------------------------
-	var express 	= require('express');
-	var bodyParser 	= require('body-parser')
-	var app 		= express();
-	var mongoose 	= require('mongoose');
+	const express 	= require('express');
+	const bodyParser= require('body-parser')
+	const app 		= express();
+	const mongoose 	= require('mongoose');
 
 // ----------------------------
 // Sets up the Express App and Data Parsing
 // ----------------------------
 	app.use(express.static('public'));
-	var PORT 		= process.env.PORT || 3000;
+	const PORT 		= process.env.PORT || 3000;
 
 	app.use(express.static(process.cwd() + '/public'));
 	app.use(bodyParser.json());
@@ -21,12 +21,12 @@
 // ----------------------------
 // Mongoose
 // ----------------------------
-	var connectionString = process.env.MONGODB_URI || "mongodb://localhost/news-worthy"
+	const connectionString = process.env.MONGODB_URI || "mongodb://localhost/news-worthy"
 
 // Mongoose Database configuration
 	mongoose.Promise= Promise;
 	mongoose.connect(connectionString);
-	var db 			= mongoose.connection;
+	const db 			= mongoose.connection;
 
 // Mongoose err message
 	db.on('err', function(err) {
