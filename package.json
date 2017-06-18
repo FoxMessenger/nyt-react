@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "build": "webpack -w"
   },
   "repository": {
     "type": "git",
@@ -18,14 +18,14 @@
   },
   "homepage": "https://github.com/FoxMessenger/nyt-react#readme",
   "dependencies": {
+    "react": "^15.6.0",
+    "react-dom": "^15.6.0",
+    "react-router": "^4.1.1",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "mongojs": "^2.4.0",
     "mongoose": "^4.10.6",
-    "morgan": "^1.8.2",
-    "react": "^15.6.0",
-    "react-dom": "^15.6.0",
-    "webpack": "^2.6.1"
+    "morgan": "^1.8.2"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",

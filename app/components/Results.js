@@ -1,6 +1,8 @@
 // This may become a child of Search
 var React = require('react');
 
+var Link = require('react-router').Link;
+
 var Results = React.createClass({
 
 	render: function() {
