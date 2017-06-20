@@ -4,11 +4,10 @@
 import React, {Component} from 'react';
 import Search from '../components/children/Search';
 import {
-  
   Link
 } from 'react-router-dom';
 // ----------------------------
-// Render to screen
+// render to screen
 // ----------------------------
 class Main extends Component {
 

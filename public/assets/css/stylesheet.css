@@ -1,9 +1,13 @@
 .title {
-    text-align: center;
-    color: tomato;
+    text-align: center;    
 
+}
+
+.input--border {
+	border-radius: 5px;
 }
 
 .row--border {
 	border-style: solid;
+	color: tomato;
 }
