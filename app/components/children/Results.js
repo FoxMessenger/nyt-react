@@ -11,11 +11,17 @@ import axios from 'axios';
 // render to screen
 // ----------------------------
 class Results extends Component {
-
+    
+    consoleLog() {
+        console.log(`this is result data ${this.props.res.data}`);
+        console.log('\n')
+        console.log('\n')
+        console.log(`this is result response docs ${this.props.res.data.response.docs}`);
+    }
 
     articleResults() {
         return this.props.res.data.response.docs.map((articles) => {
-            console.log(`this is a result ${this.props.res.data.response.docs}`);
+            
             return (
                 <div className='articles'> 
                     <p className='title'>Article Topic</p>

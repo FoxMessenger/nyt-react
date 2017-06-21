@@ -3,7 +3,7 @@
 // ----------------------------
 import React, {Component} from 'react';
 import Search from '../components/children/Search';
-// import Results from '../components/children/Results';
+import Results from '../components/children/Results';
 import {
   Link
 } from 'react-router-dom';
@@ -29,10 +29,10 @@ class Main extends Component {
 
                     <Search />
 
-                {/* 
+                { 
                     
                     <Results /> 
-                */}
+                }
 
                 </div>
             </div>

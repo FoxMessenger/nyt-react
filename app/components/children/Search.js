@@ -73,7 +73,14 @@ class Search extends Component {
             }
             
         }).then((res) => {
-            console.log(res.data.response.docs);
+            console.log(`ARTICLE:\n ${res.data.response.docs[0].lead_paragraph}`);
+            console.log('\n')
+            console.log('\n')
+            console.log(`LINK:\n ${JSON.stringify(res.data.response.docs[0].web_url)}`);
+            console.log('\n')
+            console.log('\n')
+            console.log(`IMG THUMBNAIL:\n http://${JSON.stringify(res.data.response.docs[0].multimedia[0].legacy.thumbnail)}`);
+            
             this.setState({
                 
                 // clear the query after the call
