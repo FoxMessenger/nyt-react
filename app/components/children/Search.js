@@ -2,6 +2,7 @@
 // import dependencies
 // ----------------------------
 import React, {Component} from 'react';
+import Results from './Results';
 // import helpers from '../utils/helpers';
 import axios from 'axios';
 
@@ -10,7 +11,7 @@ import axios from 'axios';
 // ----------------------------
 class Search extends Component {
 
-    
+
     constructor(props) {
         super(props);
         this.state = {
@@ -19,7 +20,7 @@ class Search extends Component {
             end_date: ''
         };
 
-        
+
         this.handleTopic        = this.handleTopic.bind(this);
         this.handleStartDate    = this.handleStartDate.bind(this);
         this.handleEndDate      = this.handleEndDate.bind(this);
@@ -92,28 +93,29 @@ class Search extends Component {
                 <div className='row'>
                     <form className='title' onSubmit={this.handleSubmit}>
                         <label>
+            {/* Query */}
                             <p>Article Topic</p>
                             <input className='input--border' type='text' value={this.state.topic} onChange={this.handleTopic} />
                             <br/>
                             <br/>
                             <p>Start Date</p>
-                            <input className='input--border' type='number' value={this.state.begin_date} onChange={this.handleStartDate} />
+                            <input className='input--border' type='date' id='startdatepicker' data-date-format='yyyy/mm/dd' value={this.state.begin_date} onChange={this.handleStartDate} />
                             <br/>
                             <br/>
                             <p>End Date</p>
-                            <input className='input--border' type='number' value={this.state.end_date} onChange={this.handleEndDate} />                    
+                            <input className='input--border' type='date' id='enddatepicker' data-date-format='yyyy/mm/dd' value={this.state.end_date} onChange={this.handleEndDate} />                    
                         </label>
                         <br />
                         <input className='btn btn-success' type='submit' value='Submit' />
                     </form>
-                    <div className='container'>
-                        <div id='results'>
-                            <div className='articles'>
-                            </div>
-                        </div>
-                    </div>
+                    <br />
+                    <br />
+
+            {/* Results*/}
+                    <Results data={this.state.data} />
                 </div>
             </div>
+                
         );
     }
 }
