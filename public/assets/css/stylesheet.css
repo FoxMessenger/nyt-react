@@ -3,6 +3,10 @@
 
 }
 
+.paragraph {
+	font-size: 12px;
+}
+
 .input--border {
 	border-radius: 5px;
 }

@@ -108,8 +108,8 @@ class Search extends Component {
 
                     {/*this.state.data ? <Results data={this.state.data}*/}
                     
-                    {this.state.results ? <Results data={this.state.results} /> : <div></div>}
-                    {/*<Results results={this.state.results} saveArticle={this.saveArticle}/>*/}
+                    {/*this.state.results ? <Results data={this.state.results} /> : <div></div>*/}
+                    <Results results={this.state.results} />
 
                 </div>
             </div>

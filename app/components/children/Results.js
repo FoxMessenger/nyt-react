@@ -53,7 +53,7 @@ class Results extends Component {
             Search.handleSubmit(this.state.topic, this.state.begin_date, this.state.end_date)
             .then((data) => {
                 console.log(data);
-                if (data != this.state.res)
+                if (data != this.state.results)
                 {
                     this.setState({
                         results: data
@@ -73,15 +73,15 @@ class Results extends Component {
     }
 
     articleResults() {
-        return this.props.res.data.response.docs.slice(0, 5).map((article) => {
+        return this.props.results.data.response.docs.slice(0, 5).map((article) => {
             return(
                 <div className='panel panel-default' key={article._id}>
-                    <h2 className='panel-body'>
-                        {article.headline.main}
-                        {article.lead_paragraph}
-                    </h2>
-                    <p><a href={article.web_url}>URL</a></p>
-                    <div>
+                    <div className='panel-body title'>
+                        <h3>{article.headline.main}</h3>
+                        <p className='paragraph'>{article.lead_paragraph}</p>
+                    </div>
+                    <div className='panel-body '> 
+                        <p><a href={article.web_url}>Read More</a></p>
                         <button className='btn btn-success' 
                             data-title = {article.headline.main} 
                             data-url = {article.web_url}
@@ -105,7 +105,7 @@ class Results extends Component {
                     <h3 className='title'><strong>Article Results</strong></h3>
                     <hr />
                     <div>
-                        {this.props.results ? this.articleResults() : <div>Rendering</div>}
+                        {this.props.results ? this.articleResults() : <div></div>}
                     </div>
 
                     {/*<div className="row">
