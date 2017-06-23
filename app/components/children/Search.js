@@ -12,7 +12,6 @@ import Results from './Results';
 // ----------------------------
 class Search extends Component {
 
-
     constructor(props) {
         super(props);
         this.state = {
@@ -20,7 +19,6 @@ class Search extends Component {
             begin_date: '',
             end_date: '',
             results: null,
-            // articles: []
         };
 
 
@@ -56,19 +54,18 @@ class Search extends Component {
             }
             
         }).then((res) => {
-            console.log(`ARTICLE:\n ${res.data.response.docs[0].lead_paragraph}`);
-            console.log('\n')
-            console.log('\n')
-            console.log(`LINK:\n ${JSON.stringify(res.data.response.docs[0].web_url)}`);
-            console.log('\n')
-            console.log('\n')
-            console.log(`IMG THUMBNAIL:\n http://${JSON.stringify(res.data.response.docs[0].multimedia)}`);
-            console.log('\n')
-            console.log('\n')
+            // console.log(`ARTICLE:\n ${res.data.response.docs[0].lead_paragraph}`);
+            // console.log('\n')
+            // console.log('\n')
+            // console.log(`LINK:\n ${JSON.stringify(res.data.response.docs[0].web_url)}`);
+            // console.log('\n')
+            // console.log('\n')
+            // console.log(`IMG THUMBNAIL:\n http://${JSON.stringify(res.data.response.docs[0].multimedia)}`);
+            // console.log('\n')
+            // console.log('\n')
             // console.log(`ALL OF IT!:\n ${JSON.stringify(res)}`);
             
             this.setState({
-                
                 // clear the query after the call
                 topic: "",
                 begin_date: '',
@@ -76,7 +73,7 @@ class Search extends Component {
                 results: res
             })
 
-            console.log(this.state.results);
+            console.log(this.state);
         }).catch((error) => {
             console.log(error);
         });
@@ -88,7 +85,7 @@ class Search extends Component {
                 <div className='row'>
                     <form className='title' onSubmit={this.handleSubmit}>
                         <label>
-            {/* Query */}
+                            {/* Form */}
                             <p>Article Topic</p>
                             <input className='input--border' type='text' value={this.state.topic} onChange={this.handleTopic} />
                             <br/>
@@ -108,7 +105,8 @@ class Search extends Component {
                 </div>
                 <div className='row'>
 
-                    {this.state.results ? <Results data={this.state.results} /> : <div></div>}
+                    {/*this.state.data ? <Results data={this.state.data}*/}
+                    {this.state.data ? <Results data={this.state.data} /> : <div></div>}
                     {/*<Results results={this.state.results} saveArticle={this.saveArticle}/>*/}
 
                 </div>
