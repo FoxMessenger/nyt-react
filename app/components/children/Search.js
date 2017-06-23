@@ -98,7 +98,8 @@ class Search extends Component {
                             <input className='input--border' type='date' id='enddatepicker' data-date-format='yyyy/mm/dd' value={this.state.end_date} onChange={this.handleEndDate} />                    
                         </label>
                         <br />
-                        <input className='btn btn-success' type='submit' value='Submit' />
+                        <br />
+                        <input className='btn btn-primary' type='submit' value='Submit' />
                     </form>
                     <br />
                     <br />
@@ -106,7 +107,8 @@ class Search extends Component {
                 <div className='row'>
 
                     {/*this.state.data ? <Results data={this.state.data}*/}
-                    {this.state.data ? <Results data={this.state.data} /> : <div></div>}
+                    
+                    {this.state.results ? <Results data={this.state.results} /> : <div></div>}
                     {/*<Results results={this.state.results} saveArticle={this.saveArticle}/>*/}
 
                 </div>
