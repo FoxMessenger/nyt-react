@@ -28,12 +28,6 @@ class Main extends Component {
                 <div className='row'>
 
                     <Search />
-
-                { 
-                    
-                    <Results /> 
-                }
-
                 </div>
             </div>
 

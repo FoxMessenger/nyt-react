@@ -1,0 +1,188 @@
+ "response":{  
+      "meta":{  
+         "hits":21233,
+         "time":11,
+         "offset":0
+      },
+      "docs":[  
+         {  
+            "web_url":"https://www.nytimes.com/video/automobiles/autoreviews/100000005130689/driven-2017-lincoln-continental.html",
+            "snippet":"Lincoln has brought back one of its signature models, the composed Continental, last seen for 2002, and it enters a competitive luxury market....",
+            "lead_paragraph":"Lincoln has brought back one of its signature models, the composed Continental, last seen for 2002, and it enters a competitive luxury market.",
+            "abstract":null,
+            "print_page":0,
+            "blog":[  
+
+            ],
+            "source":"The New York Times",
+            "multimedia":[  
+               {  
+                  "width":75,
+                  "url":"images/2017/06/02/automobiles/autoreviews/driven-lincoln-continential-pic/driven-lincoln-continential-pic-thumbStandard.jpg",
+                  "rank":0,
+                  "height":75,
+                  "subtype":"thumbnail",
+                  "legacy":{  
+                     "thumbnailheight":75,
+                     "thumbnail":"images/2017/06/02/automobiles/autoreviews/driven-lincoln-continential-pic/driven-lincoln-continential-pic-thumbStandard.jpg",
+                     "thumbnailwidth":75
+                  },
+                  "type":"image"
+               },
+               {  },
+               {  }
+            ],
+            "headline":{  
+               "main":"Driven: 2017 Lincoln Continental"
+            },
+            "keywords":[  
+               {  
+                  "isMajor":"N",
+                  "rank":1,
+                  "name":"subject",
+                  "value":"Automobiles"
+               },
+               {  
+                  "isMajor":"N",
+                  "rank":2,
+                  "name":"organizations",
+                  "value":"Ford Motor Co"
+               },
+               {  
+                  "isMajor":"N",
+                  "rank":3,
+                  "name":"subject",
+                  "value":"2017 Lincoln Continental"
+               }
+            ],
+            "pub_date":"2017-06-01T15:43:34+0000",
+            "document_type":"multimedia",
+            "news_desk":"Automobiles / New Cars",
+            "section_name":"Automobiles",
+            "subsection_name":"New Cars",
+            "byline":{  
+               "person":[  
+                  {  
+                     "organization":"",
+                     "role":"reported",
+                     "rank":1,
+                     "firstname":"Tom",
+                     "lastname":"VOELK"
+                  }
+               ],
+               "original":"By TOM VOELK"
+            },
+            "type_of_material":"Video",
+            "_id":"593036297c459f24986e2da8",
+            "word_count":23,
+            "slideshow_credits":null
+         },
+         {  
+            "web_url":"https://www.nytimes.com/2017/06/16/realestate/waterline-square-far-west-side-59th-street.html",
+            "snippet":"The riverfront area around West 59th Street has been a work in progress for decades, but the final three apartment towers are now under construction....",
+            "lead_paragraph":"The riverfront area around West 59th Street has been a work in progress for decades, but the final three apartment towers are now under construction.",
+            "abstract":null,
+            "print_page":"6",
+            "blog":[  
+
+            ],
+            "source":"The New York Times",
+            "multimedia":[  
+               {  
+                  "width":600,
+                  "url":"images/2017/06/18/realestate/18HIGHEND2/18HIGHEND2-articleLarge.jpg",
+                  "rank":0,
+                  "height":337,
+                  "subtype":"xlarge",
+                  "legacy":{  
+                     "xlargewidth":600,
+                     "xlarge":"images/2017/06/18/realestate/18HIGHEND2/18HIGHEND2-articleLarge.jpg",
+                     "xlargeheight":337
+                  },
+                  "type":"image"
+               },
+               {  
+                  "width":190,
+                  "url":"images/2017/06/18/realestate/18HIGHEND2/18HIGHEND2-thumbWide.jpg",
+                  "rank":0,
+                  "height":126,
+                  "subtype":"wide",
+                  "legacy":{  
+                     "wide":"images/2017/06/18/realestate/18HIGHEND2/18HIGHEND2-thumbWide.jpg",
+                     "widewidth":190,
+                     "wideheight":126
+                  },
+                  "type":"image"
+               },
+               {  
+                  "width":75,
+                  "url":"images/2017/06/18/realestate/18HIGHEND2/18HIGHEND2-thumbStandard.jpg",
+                  "rank":0,
+                  "height":75,
+                  "subtype":"thumbnail",
+                  "legacy":{  
+                     "thumbnailheight":75,
+                     "thumbnail":"images/2017/06/18/realestate/18HIGHEND2/18HIGHEND2-thumbStandard.jpg",
+                     "thumbnailwidth":75
+                  },
+                  "type":"image"
+               }
+            ],
+            "headline":{  
+               "main":"The Last Piece of a Far West Side Project Gets Built",
+               "kicker":"The High End",
+               "print_headline":"The Last Piece of a Far West Side Project Falls Into Place",
+               "content_kicker":"The High End"
+            },
+            "keywords":[  
+               {  
+                  "isMajor":"N",
+                  "rank":1,
+                  "name":"subject",
+                  "value":"Real Estate and Housing (Residential)"
+               },
+               {  
+                  "isMajor":"N",
+                  "rank":2,
+                  "name":"glocations",
+                  "value":"Hudson River"
+               },
+               {  
+                  "isMajor":"N",
+                  "rank":3,
+                  "name":"glocations",
+                  "value":"Lincoln Square (Manhattan, NY)"
+               }
+            ],
+            "pub_date":"2017-06-16T19:25:28+0000",
+            "document_type":"article",
+            "news_desk":"RealEstate",
+            "section_name":"Real Estate",
+            "subsection_name":null,
+            "byline":{  
+               "person":[  
+                  {  
+                     "firstname":"C.",
+                     "middlename":"J.",
+                     "lastname":"HUGHES",
+                     "rank":1,
+                     "role":"reported",
+                     "organization":""
+                  }
+               ],
+               "original":"By C. J. HUGHES"
+            },
+            "type_of_material":"News",
+            "_id":"594430ae7c459f257c1aa62c",
+            "word_count":765,
+            "slideshow_credits":null
+         },
+         {  
+            "web_url":"https://www.nytimes.com/2017/06/01/automobiles/autoreviews/lincoln-continental.html",
+            "snippet":"The luxury sedan arrives looking toned, confident and familiar in a Bentley Flying Spur kind of way. The rest of the car has its own character....",
+            "lead_paragraph":"The luxury sedan arrives looking toned, confident and familiar in a Bentley Flying Spur kind of way. The rest of the car has its own character.",
+            "abstract":null,
+            "print_page":6,
+            "blog":[  
+
+            ],
