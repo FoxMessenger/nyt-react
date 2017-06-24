@@ -28,7 +28,7 @@
 // Mongoose Database configuration
 	mongoose.Promise= Promise;
 	mongoose.connect(connectionString);
-	const db 			= mongoose.connection;
+	const db 		= mongoose.connection;
 
 // Mongoose err message
 	db.on('err', function(err) {
