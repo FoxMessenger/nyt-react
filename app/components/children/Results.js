@@ -82,13 +82,6 @@ class Results extends Component {
                     <div>
                         {this.props.results ? this.articleResults() : <div></div>}
                     </div>
-                    {/*<div className='row'>
-                        {this.props.results ? this.saveArticle() : <div></div>}
-                    </div>
-
-                    <div className='row'>
-                        {this.props.results ? this.deleteArticle() : <div></div>}
-                    </div>*/}
                 </div>
             </div>
         );
