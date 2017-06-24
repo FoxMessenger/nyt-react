@@ -1,7 +1,7 @@
 // ----------------------------
 // import dependencies
 // ----------------------------
-import mongoose from 'mongoose';
+const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
@@ -26,4 +26,4 @@ const ArticleSchema = new Schema ({
 
 const Article = mongoose.model('Article', ArticleSchema);
 
-export default routes;
+module.exports = Article;

@@ -5,6 +5,8 @@
 	const bodyParser= require('body-parser')
 	const app 		= express();
 	const mongoose 	= require('mongoose');
+	const logger	= require('morgan');
+	const Article 	= require("./models/Article");
 
 // ----------------------------
 // Sets up the Express App and Data Parsing
@@ -21,7 +23,7 @@
 // ----------------------------
 // Mongoose
 // ----------------------------
-	const connectionString = process.env.MONGODB_URI || "mongodb://localhost/news-worthy"
+	const connectionString = process.env.MONGODB_URI || "mongodb://localhost/nyt-react"
 
 // Mongoose Database configuration
 	mongoose.Promise= Promise;
@@ -37,6 +39,10 @@
 	db.once('open', function() {
 	  console.log('Mongoose connection successful.');
 	});
+
+// routes
+	const router = require("./controllers/router.js");
+	app.use('/', router);
 
 // ----------------------------
 // Run Server

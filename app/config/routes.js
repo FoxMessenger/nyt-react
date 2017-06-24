@@ -25,4 +25,4 @@ const routes = (
     </HashRouter>
 );
 
-export default routes;
+export default router;

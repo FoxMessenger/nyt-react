@@ -1,11 +1,13 @@
 // ----------------------------
-// server side dependencies
-// you cannot use import for backend
+// dependencies
 // ----------------------------
 const express = require('express');
 const router = express.Router();
 const Article = require("../models/Article.js");
 
+// ----------------------------
+// Routes
+// ----------------------------
 
 // all saved articles
 router.get('/api/savedarticles', (req, res) => {
@@ -46,5 +48,5 @@ router.get('/', (req, res) => {
     res.sendFile('/public/index.html');
 })
 
-// export default router;
 module.exports = router;
+

@@ -2,8 +2,10 @@
 // import dependencies
 // ----------------------------
 import React, {Component} from 'react';
-// import routes from './config/routes';
-import routes from '../controllers/routes'
+import {
+  HashRouter,
+  Route,
+} from 'react-router-dom';
 import ReactDOM from 'react-dom';
 
 
@@ -17,4 +19,17 @@ import Results from "./components/children/Results";
 // ----------------------------
 
 
-ReactDOM.render(routes, document.getElementById('app'));
+const router = (
+
+    <HashRouter>
+
+
+	        <Route path="/" component={Main}>
+
+	        </Route>
+
+
+    </HashRouter>
+);
+
+ReactDOM.render(router, document.getElementById('app'));

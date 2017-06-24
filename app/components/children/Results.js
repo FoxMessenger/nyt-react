@@ -2,7 +2,7 @@
 // import dependencies
 // ----------------------------
 import React, {Component} from 'react';
-// import Search from './Search';
+import Search from './Search';
 import axios from 'axios';
 
 
@@ -49,7 +49,9 @@ class Results extends Component {
     }
     
     componentDidUpdate(prevProps, prevState){
+        console.log("this is the state: " + this.state)
         if(prevState.topic != this.state.topic){
+            
             Search.handleSubmit(this.state.topic, this.state.begin_date, this.state.end_date)
             .then((data) => {
                 console.log(data);
