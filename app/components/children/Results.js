@@ -2,7 +2,8 @@
 // import dependencies
 // ----------------------------
 import React, {Component} from 'react';
-import Search from './Search';
+// import Search from './Search';
+// import Saved from './Saved';
 import axios from 'axios';
 
 
@@ -14,13 +15,13 @@ class Results extends Component {
     constructor(props) {
         super(props);
         this.saveArticle = this.saveArticle.bind(this)
-        this.deleteArticle = this.deleteArticle.bind(this)
-        this.getArticle = this.getArticle.bind(this)
+        // this.deleteArticle = this.deleteArticle.bind(this)
+        // this.getArticle = this.getArticle.bind(this)
     }
 
     saveArticle(event) {
         const article = event.target.dataset;
-        axios.post('/api/saved', {
+        axios.post('/api/saveArticle', {
             'title': article.title,
             'date': article.date,
             'url': article.url
@@ -29,50 +30,24 @@ class Results extends Component {
         })
     }
 
-    deleteArticle(article) {
-        axios.delete(`/api/saved/${article._id}`)
-            .then((res) => {
-                this.setState({
-                    articles: res.data
-                })
-                return res;
-            })
-    }
+    // deleteArticle(article) {
+    //     axios.delete(`/api/saved/${article._id}`)
+    //         .then((res) => {
+    //             this.setState({
+    //                 articles: res.data
+    //             })
+    //             return res;
+    //         })
+    // }
 
-    getArticle() {
-        axios.get('/api/saved')
-            .then((res) => {
-                this.setState({
-                    articles: res.data
-                });
-            })
-    }
-    
-    componentDidUpdate(prevProps, prevState){
-        console.log("this is the state: " + this.state)
-        if(prevState.topic != this.state.topic){
-            
-            Search.handleSubmit(this.state.topic, this.state.begin_date, this.state.end_date)
-            .then((data) => {
-                console.log(data);
-                if (data != this.state.results)
-                {
-                    this.setState({
-                        results: data
-                    })
-                }
-            })
-        }
-    }
-
-    componentDidMount(){
-        axios.get('/api/saved')
-            .then((res) => {
-                this.setState({
-                    articles: res.data
-                })
-            })
-    }
+    // getArticle() {
+    //     axios.get('/api/saved')
+    //         .then((res) => {
+    //             this.setState({
+    //                 articles: res.data
+    //             });
+    //         })
+    // }    
 
     articleResults() {
         return this.props.results.data.response.docs.slice(0, 5).map((article) => {
@@ -109,7 +84,6 @@ class Results extends Component {
                     <div>
                         {this.props.results ? this.articleResults() : <div></div>}
                     </div>
-
                     {/*<div className="row">
                         {this.props.results ? this.saveArticle() : <div></div>}
                     </div>
@@ -117,7 +91,6 @@ class Results extends Component {
                     <div className="row">
                         {this.props.results ? this.deleteArticle() : <div></div>}
                     </div>*/}
-                    
                 </div>
             </div>
         );

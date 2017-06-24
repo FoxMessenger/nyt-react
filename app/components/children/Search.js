@@ -4,6 +4,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Results from './Results';
+import Saved from './Saved';
 // import helpers from '../utils/helpers';
 
 
@@ -110,6 +111,7 @@ class Search extends Component {
                     
                     {/*this.state.results ? <Results data={this.state.results} /> : <div></div>*/}
                     <Results results={this.state.results} />
+                    <Saved />
 
                 </div>
             </div>

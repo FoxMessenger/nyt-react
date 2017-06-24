@@ -8,7 +8,7 @@ const Article = require("../models/Article.js");
 
 
 // all saved articles
-router.get('/api/savedarticles', (req, res) => {
+router.get('/api/saved', (req, res) => {
     Article.find({}).exec((err, data) => {
         if (err) {
             console.log(err);
@@ -19,7 +19,7 @@ router.get('/api/savedarticles', (req, res) => {
 });
 
 // save an article
-router.post('/api/saved', (req, res) => {
+router.post('/api/saveArticle', (req, res) => {
    	const newArticle = new Article(req.body);
     newArticle.save((err, data) => {
         if (err) {
