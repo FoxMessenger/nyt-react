@@ -84,6 +84,16 @@ class Saved extends Component {
         })
     }
 
+    // Links() {
+    //     return (
+    //         <div className="container">
+    //             <div className="col-md-12">
+    //             <Link to = "/saved"><button className="btn-block btn btn-lg btn-info btnLink">View Saved Articles</button></Link>
+    //             </div>
+    //         </div>
+    //     )
+    // }
+
     render() {
 
         return(

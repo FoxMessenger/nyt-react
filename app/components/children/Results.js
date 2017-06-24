@@ -15,8 +15,8 @@ class Results extends Component {
     constructor(props) {
         super(props);
         this.saveArticle = this.saveArticle.bind(this)
-        this.deleteArticle = this.deleteArticle.bind(this)
-        this.getArticle = this.getArticle.bind(this)
+        // this.deleteArticle = this.deleteArticle.bind(this)
+        // this.getArticle = this.getArticle.bind(this)
     }
 
     saveArticle(event) {
@@ -30,24 +30,24 @@ class Results extends Component {
         })
     }
 
-    deleteArticle(article) {
-        axios.delete(`/api/saved/${article._id}`)
-            .then((res) => {
-                this.setState({
-                    articles: res.data
-                })
-                return res;
-            })
-    }
+    // deleteArticle(article) {
+    //     axios.delete(`/api/saved/${article._id}`)
+    //         .then((res) => {
+    //             this.setState({
+    //                 articles: res.data
+    //             })
+    //             return res;
+    //         })
+    // }
 
-    getArticle() {
-        axios.get('/api/saved')
-            .then((res) => {
-                this.setState({
-                    articles: res.data
-                });
-            })
-    }    
+    // getArticle() {
+    //     axios.get('/api/saved')
+    //         .then((res) => {
+    //             this.setState({
+    //                 articles: res.data
+    //             });
+    //         })
+    // }    
 
     articleResults() {
         return this.props.results.data.response.docs.slice(0, 5).map((article) => {
@@ -84,13 +84,13 @@ class Results extends Component {
                     <div>
                         {this.props.results ? this.articleResults() : <div></div>}
                     </div>
-                    {<div className="row">
+                    {/*<div className="row">
                         {this.props.results ? this.saveArticle() : <div></div>}
                     </div>
 
                     <div className="row">
                         {this.props.results ? this.deleteArticle() : <div></div>}
-                    </div>}
+                    </div>*/}
                 </div>
             </div>
         );
