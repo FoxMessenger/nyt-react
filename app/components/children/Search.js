@@ -50,8 +50,8 @@ class Search extends Component {
             params: {
                 'api-key': nytAPI,
                 'q': this.state.topic,
-                'begin_date': this.state.begin_date || 20100101,
-                'end_date': this.state.end_date || 20170624
+                'begin_date': this.state.begin_date.split("-").join("") || 20100101,
+                'end_date': this.state.end_date.split("-").join("") || 20170624
             }
             
         }).then((res) => {

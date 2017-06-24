@@ -1,7 +1,7 @@
 // ----------------------------
 // import dependencies
 // ----------------------------
-import React, {Component} from 'react';
+import React, {Component, Link} from 'react';
 import axios from 'axios';
 
 // ----------------------------
@@ -84,15 +84,6 @@ class Saved extends Component {
         })
     }
 
-    // Links() {
-    //     return (
-    //         <div className="container">
-    //             <div className="col-md-12">
-    //             <Link to = "/saved"><button className="btn-block btn btn-lg btn-info btnLink">View Saved Articles</button></Link>
-    //             </div>
-    //         </div>
-    //     )
-    // }
 
     render() {
 
@@ -103,7 +94,7 @@ class Saved extends Component {
                     <h3 className='panel-title text-center'>Saved Articles</h3>
                 </div>
                 <div className='panel-body'>
-                    {this.props.results ? this.savedArticles() : <div></div>}
+                    {this.state.results ? this.savedArticles() : <div></div>}
                 </div>
             </div>
 
