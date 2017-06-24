@@ -14,17 +14,6 @@ class Saved extends Component {
         this.state = {articles: null};
 
     }
-
-    // getInitialState() {
-    //     return {
-    //         articles: res.articles
-    //     }
-    // }
-
-
-    // clickToDelete(res) {
-    //     this.props.deleteArticle(res);
-    // }
     
     componentDidMount(){
         axios.get('/api/saved')
@@ -32,38 +21,13 @@ class Saved extends Component {
                 this.setState({
                     articles: res
                 })
+                // console.log('this is a state: ' + (this.state.articles.data[0].[0].title));
             })
     }
 
-    // componentWillReceiveProps(props) {
-    //     console.log('this is props.articles: ' + JSON.stringify(props))
-    //     const myResults = props.articles.map((search, i) => {
-    //     const click = this.clickToDelete.bind(this, search);
-    //     return <div className='list-group-item' key={i}><a href={search.url} target='_blank'>{search.title}</a>{search.date}<button type='button' className='btn btn-danger' onClick={click}>Delete</button></div>
-    // });
-
-    //     this.setState({articles: myResults});
-    // }
-    
-    // componentDidUpdate(prevProps, prevState){
-    //     console.log('this is the current state: ' + JSON.stringify(this.state));
-    //     if(prevState.topic != this.state.topic){
-            
-    //         Search.handleSubmit(this.state.topic, this.state.begin_date, this.state.end_date)
-    //         .then((data) => {
-    //             console.log(data);
-    //             if (data != this.state.results)
-    //             {
-    //                 this.setState({
-    //                     results: data
-    //                 })
-    //             }
-    //         })
-    //     }
-    // }
-
     savedArticles() {
-        return this.state.results.data.map((article) => {
+        // console.log(`The saved Articles: ${this.state.articles}`);
+        return this.state.articles.data.map((article) => {
             return (
                 <div className = 'panel panel-primary' key={article._id}>
                     <div className = 'panel-heading'>
@@ -92,9 +56,10 @@ class Saved extends Component {
             <div className='panel panel-success'>
                 <div className='panel-heading'>
                     <h3 className='panel-title text-center'>Saved Articles</h3>
+                    {this.state.articles ? this.savedArticles() : <div></div>}
                 </div>
                 <div className='panel-body'>
-                    {this.state.results ? this.savedArticles() : <div></div>}
+                    
                 </div>
             </div>
 

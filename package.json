@@ -4,7 +4,9 @@
   "description": "a React-based rendition of the New York Times Article Search application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon server",
+    "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
